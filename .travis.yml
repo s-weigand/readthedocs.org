@@ -34,15 +34,3 @@ install:
   - pip install tox-travis
 script:
   - ./scripts/travis/run_tests.sh
-notifications:
-  slack:
-    rooms:
-      - readthedocs:y3hjODOi7EIz1JAbD1Zb41sz#random
-    on_success: change
-    on_failure: always
-
-branches:
-  only:
-  - master
-  - rel # Community release branch
-  - relcorp # Corporate release branch
